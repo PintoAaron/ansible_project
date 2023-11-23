@@ -1,2 +1,3 @@
 # ansible_project
-Understanding how Ansible is used for automation 
+
+Understanding how Ansible is used for automation
