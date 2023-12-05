@@ -1,8 +1,2 @@
-server1@172.16.256.132
-server2@172.16.256.133
-server3@172.16.256.134
-server4@172.16.256.135
-server5@172.16.256.136
-server6@172.16.256.137
-server7@172.16.256.138
-server8@172.16.256.139
+[webservers]
+localhost ansible_connection=local

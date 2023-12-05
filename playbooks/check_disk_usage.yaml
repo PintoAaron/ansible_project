@@ -1,0 +1,13 @@
+---
+- name: Check disk usage
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Get disk usage
+      shell: df -h
+      register: disk_usage_output
+
+    - name: Print disk usage
+      debug:
+        var: disk_usage_output.stdout_lines
