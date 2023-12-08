@@ -1,0 +1,19 @@
+---
+ -  name: Install apache on two different os
+    hosts: all
+    tasks:
+      - name: Install apache on centos
+        dnf:
+          name: 
+             - httpd
+             - php
+          state: latest
+        when: ansible_distribution_version == "CentOS"
+      
+      - name: Install apache on ubuntu
+        apt:
+          name: 
+             - apache2
+             - libapache2-mod-php
+          state: latest
+        when: ansible_distribution_version == "Ubuntu"
